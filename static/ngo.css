@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/* 
+body{
+    height: 1500px;
+} */
+
+nav::before {
+    content: "";
+    background: rgb(98, 221, 255);
+    background: linear-gradient(300deg, rgba(32, 100, 119, 0.787) 0%, rgb(17, 45, 78) 100%);
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    height: auto;
+    width: auto;
+    z-index: 5;
+    /* width: 100vw; */
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    background: rgb(0, 198, 255);
+    background: linear-gradient(300deg, rgba(0, 198, 255, 1) 0%, rgba(0, 80, 179, 1) 100%);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+nav h1 {
+    margin: auto 3rem;
+    font-size: x-large;
+    color: white;
+}
+nav h1 a:hover{
+    color: white;
+}
+.profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.logout {
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 0.3em 0.5em;
+    margin: 0.5em;
+}
+.logout:hover{
+    background-color: white;
+    color:rgb(0, 198, 255);
+
+}
+
+.profil img {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    /* margin: 0.4rem 1.5rem; */
+    margin-bottom: 0%;
+}
+
+#img {
+    height: 100%;
+    width: 100%;
+}
+
+.alert{
+    margin-bottom: 0;
+}
+
+
+.describe {
+    background-color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.describe p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 1em;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.describe form {
+    font-weight: 800;
+    padding: 1.7em 1.7em;
+}
+
+form {
+    background-color: white;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 5em;
+    border-radius: 15px;
+}
+
+.describe form>* {
+    display: block;
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.describe form textarea {
+    padding: 10px;
+    font-size: large;
+    letter-spacing: 0.9px;
+}
+
+
+input[type=number], [type=text], [type=search], [name=des] {
+    padding: 0.5em 1em;
+    width: -webkit-fill-available;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 4px;
+    border: 1.5px solid #3d3d3d;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%)
+}
+
+.btn-grad {
+    padding: 6px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /*    box-shadow: 0 0 20px #eee; */
+    border-radius: 5px;
+    font-size: medium;
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.cmmts{
+    border: 2px solid #eaaa47;
+    background-color: khaki;
+    border-radius: 10px;
+}
+.cmmts p{
+    padding: 0.2em;
+    font-size: 1rem;
+    color: #1d1d1d;
+    letter-spacing: 0;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.walk {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.step h1 {
+    color: #f8f9fa;
+    text-shadow: 2px 2px 2px #000000;
+    font-weight: 600;
+    margin: 8rem auto 2rem auto;
+}
+
+.step p {
+    padding: 0px 15px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border-radius: 15px;
+    width: 30%;
+    height: 30rem;
+    margin: 1rem;
+    position: relative;
+    box-shadow: 0 0 15px 5px rgb(176 176 176);
+}
+
+.s1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("https://images.pexels.com/photos/3944376/pexels-photo-3944376.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center/cover;
+    border-radius: 15px;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.s2::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(https://assets.vakilsearch.com/live-images/infographics/The%203%20Laws%20of%20NGO%20Registration-100.jpg) no-repeat center/cover;
+    border-radius: 15px;
+    filter: blur(3px);
+
+    z-index: -1;
+}
+
+.s3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2l2ZSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80) no-repeat center/cover;
+    border-radius: 15px;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+:visited {
+    color: white;
+}
+
+@media(max-width:768px) {
+    .quote img {
+        height: 100%;
+    }
+
+    .quote p {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width:550px) {
+    .walk {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 60%;
+        height: 26rem;
+    }
+
+    .describe p {
+        font-size: clamp(0.7rem, 1vw, 1rem);
+    }
+
+}
+
+@media (max-width:460px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .quote p {
+        font-size: 1.2rem;
+    }
+
+}

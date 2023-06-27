@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+
+{% block tilte %}
+
+{%endblock%}
+{%block content%}
+<aside id="box">
+    <span id="output" class="t1">
+        <table id='t'>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>food</th>  
+                </tr>
+            </thead>
+
+            <tbody id="tb">
+                {% for i in data %}
+                <tr class="row1">
+                    <td class="tdata">{{loop.index0+1}}</td>
+                    <td class="tdata">{{i[8]}}</td>
+                    <td class="tdata">{{i[11]}}</td>
+                    <td class="tdata">{{i[3]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table id='t1'>
+            <thead>
+                <tr>
+                    <th>srno</th>
+                    <th>ngo</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tb">
+                {% for i in da %}
+                <tr class="row2">
+                    <td class="tdata1">{{loop.index0+1}}</td>
+                    <td class="tdata1">{{i[8]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </span>
+</aside>
+
+{%endblock%}

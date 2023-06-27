@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='prfile.css') }}">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+        <div class="edit">
+            <ul>
+                <li><a href="/res/{{usr}}/profile" id="chng-pass">change password</a></li>
+                <li><a href="#" id="">privacy</a></li>
+                <li><a href="#" id="help">help</a></li>
+                <li><a href="/res/{{usr}}/profile/AddAccount" id="add-acc">Add Account</a></li>
+                <li><a href="/res/{{usr}}" id="add-acc">Back</a></li>
+            </ul>
+        </div>
+        <div class="form">
+            <form action="" name="f2" class="f2" id="f2" method="post" onsubmit="">
+                <label for="old_pass">Old password</label>
+                <div class="inp">
+                <i class="hide fa fa-eye"></i>
+                <i class="show fa fa-eye-slash"></i>
+                <input type="password" name="old_pass" class="old-pass ">
+                </div>
+
+                <label for="new_pass">New password</label>
+                <div class="inp"><i class="hide1 fa fa-eye hide"></i>
+                <i class="show1 fa fa-eye-slash show"></i>
+                <input type="password" name="new_pass" class="new-pass ">
+                </div>
+                <span id=" pazz"></span>
+
+                <label for="cnf_pass">confirm password</label>
+                <div  class="inp" ><i class="hide2 fa fa-eye hide"></i>
+                <i class="show2 fa fa-eye-slash show"></i>
+                <input type="password" name="cnf_pass" class="cnf-pass "></div>
+
+                <input type="submit" name="Submit" class="btn-grad" id="pswd">
+            </form>
+        </div>
+
+    <script src="{{ url_for('static',filename='profile.js') }}"></script>
+</body>
+
+</html>

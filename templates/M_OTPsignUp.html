@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='signUp.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<!-- action="/sign-Up.html" method="post"-->
+
+<body>
+    <div class="card">
+        <h1 class="label">Sign Up</h1>
+        <form name="f1" action="/M_OTPsignUp" method="post" onsubmit="return M_OTPsignUp()">
+            <div class="all">
+
+                <div>
+                    <p class="otp">Mobile-OTP</p>
+                    <input type="text" name="M_OTP" placeholder="XX-XX-XX">
+                    <p>{{msg}}</p>
+                </div>
+                <div class="btn1">
+                    <input type="submit" name="login" value="Next" class="con" id="sss">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static',filename='signUp.js') }}"></script>
+</body>
+
+</html>

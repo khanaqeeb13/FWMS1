@@ -1,0 +1,33 @@
+.tbl {
+    height: 16em;
+    overflow: auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 3px;
+    /* border: 10px solid; */
+    margin: 0.5em;
+    /* font-size: 1em; */
+    font-size: clamp(0.7rem, 1.9vw, 1rem);
+
+}
+
+th,
+td {
+    background-color: #b2bec3;
+    padding: 0 1em;
+    text-align: center;
+    letter-spacing: 1.2 px;
+    /* border: 1px solid blue; */
+}
+
+.add {
+    font-size: clamp(0.4rem, 1vw, 1rem);
+    font-weight: bolder;
+}
+
+th {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}

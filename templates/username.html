@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='username.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <form name="f1" action="" id="signupform" method="post" onsubmit="return M_signUp()">
+            <h1 class="label">New Username</h1>
+            <div class="sep_col">
+                <div>
+                    <p class="num">Mobile Number</p>
+                    <input type="text" name="number" placeholder="1234567890" id="number">
+                </div>
+                <div>
+                    <p class="user"> Username</p>
+                    <input type="text" name="text" placeholder="ABCabc" id="text">
+                    <span class="msg" id="msg">{{msg}}</span>
+                </div>
+                <div class="btn1">
+                    <input type="submit" name="login" value="Confirm" class="con" id="sss">
+                </div>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static',filename='signUp.js') }}"></script>
+</body>
+
+</html>

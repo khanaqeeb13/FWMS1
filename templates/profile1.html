@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='prfile.css') }}">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+        <div class="edit">
+            <ul>
+                <li><a href="/ngo/{{usr}}/profile1" id="edit">edit</a></li>
+                <li><a href="/ngo/{{usr}}/profile1/passwrd" id="chng-pass">change password</a></li>
+                <li><a href="#" id="">privacy</a></li>
+                <li><a href="#" id="help">help</a></li>
+                <li><a href="/ngo/{{usr}}/profile1/AddAccount" id="add-acc">Add Account</a></li>
+                <li><a href="/ngo/{{usr}}" id="">Back</a></li>
+            </ul>
+        </div>
+        <div class="form">
+
+            <form action="" name="f1" class="f1" id="f1" method="post" onsubmit="return newform()">
+                <label for="full_name">full name</label>
+                <input type="text" name="full_name">
+                <label for="mobile_num">Mobile number</label>
+                <input type="number" name="mobile_num">
+                <label for="pincode">Pincode</label>
+                <input type="number" name="pincode">
+                <label for="add">Address</label>
+                <input type="text/number" name="add">
+                <label for="area_name">Street Name, &nbsp; Area name</label>
+                <input type="text" name="area_name">
+                <label for="landmark">Landmark</label>
+                <input type="text" name="landmark">
+                <label for="city">Town/ City</label>
+                <input type="text" name="city">
+                <label for="">State</label>
+                <select name = "state">
+                
+                    <option value="Maharasthra"  for = "">Maharasthra</option>
+                    <option value="UP"  for = "">UP</option>
+                    <option value="Gujurat"  for = "">Gujurat</option>
+                    <option value="MP"  for = "">MP</option>
+                    <option value="AP"  for = "">AP</option>
+                    
+                </select>
+                <input type="submit" name="Submit" class=".btn-grad">
+            </form>
+        </div>
+
+    <script src="{{ url_for('static',filename='profile.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='login.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <form name="myform" onsubmit="return login12()" method="post">
+        <div class="card">
+            <div class="label">
+                <a class="i" href="/"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+                <h1 class="label"> Login</h1>
+            </div>
+            <div class="bg">
+                <div>
+                    <p class="user"> Username</p>
+                    <input type="text" name="text" placeholder="e.g.-ABCabc">
+                </div>
+                <a class="forget" href="{{ url_for('username') }}">Forget Username</a>
+                <div>
+                    <p class="Pass">Password</p>
+                    <div class="passfa">
+                        <i class="hide fa fa-eye"></i>
+                        <i class="show fa fa-eye-slash"></i>
+                        <input class='password' type="password" name="password" placeholder="XYZ!@#321">
+                    </div>
+                </div>
+                <a class="forget" href="{{ url_for('password') }}">Forget Password</a>
+                <p>
+                    {{ msg }}
+                </p>
+                <p class="field" id="fld">Select field:</p>
+                <div class="sel">
+                    <input type="radio" name="select" class="a" id="btn1" value="Sources">
+                    <label id="name" class="a" for="Sources">Sources</label>
+                    <input type="radio" name="select" class="a" id="btn3" value="NGO">
+                    <label id="name" class="a" for="NGO">NGO</label>
+                </div>
+                <div class="btn">
+                    <!-- <a href="res.html">
+                    </a> -->
+                    <input type="submit" name="login" value="login" class="log">
+                    <p>haven't register?</p>
+                    <a href="{{ url_for('E_signUp') }}" class="btn1">sign up</a>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="{{ url_for('static',filename='login.js') }}"></script>
+
+</body>
+
+</html>

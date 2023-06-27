@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='prfile.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+        <div class="edit">
+            <ul>
+                <li><a href="/res/{{usr}}/profile" id="chng-pass">change password</a></li>
+                <li><a href="#" id="">privacy</a></li>
+                <li><a href="#" id="help">help</a></li>
+                <li><a href="/res/{{usr}}/profile/AddAccount" id="add-acc">Add Account</a></li>
+                <li><a href="/res/{{usr}}" id="add-acc">Back</a></li>
+            </ul>
+        </div>
+        <div class="form">
+            <div id="f3">
+                <a href="#">Switch Account</a><br>
+                <a href="{{ url_for('signUp') }}">Add Account</a>
+            </div>
+        </div>
+</body>
+
+</html>

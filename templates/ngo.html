@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='faq.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='table.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='ngo.css') }}">
+    <script src="{{ url_for('static',filename='ngo.js') }}"></script>
+</head>
+
+<body>
+    <nav>
+        <h1><a href="{{url_for('homepage')}}">Apptitue</a></h1>
+
+        <div class="profil">
+            <a class="logout" href="{{ url_for('logout1') }}">Logout</a>
+            <a href="{{ url_for('profile1',usr=usr) }}"><img
+                    src="https://www.pngitem.com/pimgs/m/22-223968_default-profile-picture-circle-hd-png-download.png"
+                    alt=""></a>
+        </div>
+    </nav>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>kindly</strong> fill the profile atleast once.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <section>
+        <img id="img"
+            src="https://pixelproduction.de/wp-content/uploads/2020/04/pixelproduction_blogbeitraege_marketing_ngo-1.jpg"
+            alt="">
+
+    </section>
+
+    <section class="describe">
+        <p>From Where To Pick Food!</p>
+
+        <form action="" name="" method="post" id="todo-form">
+            <div class="tbl">
+                <table id='t' border="1">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Food Details</th>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Pincode</th>
+                            <th>Address</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tb">
+                        {% for i in rest %}
+                        <tr>
+                            <td class="tdata">{{loop.index0+1}}</td>
+                            <td class="tdata"><input type="hidden" name="food" id="food" value="{{i[3]}}"> {{i[3]}}</td>
+                            <td class="tdata"><input type="hidden" name="naam" id="naam" value="{{i[8]}}"> {{i[8]}}</td>
+                            <td class="tdata">{{i[5]}}</td>
+                            <td class="tdata">{{i[6]}}</td>
+                            <td class="tdata">{{i[7]}}</td>
+                            <td> <input type="radio" name="resuser" id="ngo_cnf" value={{i[2]}}></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="cmmts">
+                <p>Please wait for some time before submitting next entry
+                <p>
+            </div>
+            <input type="submit" name="submit" class="btn-grad" value="submit">
+        </form>
+    </section>
+    <section class="walk">
+        <div class="step s1">
+            <h1>Steps 1</h1>
+            <p>Select entries where you wish to pickup food from the given table (only last 60 min entries will be
+                shown)
+            </p>
+        </div>
+        <!-- <div class="step s2">
+            <h1>Steps 2</h1>
+            <p>
+            </p>
+        </div> -->
+        <div class="step s3">
+            <h1>Steps 2</h1>
+            <p>Collect food from the destination.
+            </p>
+        </div>
+    </section>
+    <section class="faq">
+        <div class="faq1">
+            <h1>FAQ</h1>
+            <div class="fa1">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur, libero
+                    accusantium
+                    facere, dolores harum quisquam ex reprehenderit ipsa necessitatibus iure, aspernatur quo ipsam
+                    assumenda?</p>
+            </div>
+            <div class="fa1">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur, libero
+                    accusantium
+                    facere, dolores harum quisquam ex reprehenderit ipsa necessitatibus iure, aspernatur quo ipsam
+                    assumenda?</p>
+            </div>
+            <div class="fa1">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur, libero
+                    accusantium
+                    facere, dolores harum quisquam ex reprehenderit ipsa necessitatibus iure, aspernatur quo ipsam
+                    assumenda?</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h1>APPETITE</h1>
+        <div class="footer">
+            <div class="f1">
+                <h3>OUR TEAM</h3>
+                <ul>
+                    <li>Aqeeb</li>
+                    <li>Rahied</li>
+                </ul>
+            </div>
+            <div class="f2">
+                <h3>LINKS</h3>
+                <a href="{{ url_for('login') }}">Sources</a>
+                <a href="{{ url_for('login') }}">NGO</a>
+            </div>
+            <div class="f3">
+                <h3>FOR YOU</h3>
+                <ul>
+                    <li> About us </li>
+                    <li> Contact us</li>
+                    <li>Report </li>
+                </ul>
+            </div>
+        </div>
+        <div class="f4">
+            <p>
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                Content Policies. All trademarks are properties of their respective owners. 2022 &copy; Apptite™ Ltd.
+                All
+                rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

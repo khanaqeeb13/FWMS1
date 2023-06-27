@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style: none;
+    outline-color: #FFD200;
+    outline-offset: 0.2em;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body{
+    margin-top: 2em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(86, 103, 124);
+    width: 32%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+div{
+    margin: 0.3em 0;
+}
+
+.bg{
+    padding: 1em;
+    margin: 0;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 0.5em 0 ;
+}
+
+:visited{
+    color: rgb(255, 255, 255);
+}
+
+.label{
+    background: rgb(0,198,255);
+    background: linear-gradient(300deg, rgba(0,198,255,1) 0%, rgba(0,80,179,1) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    position: relative;
+}
+.i{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 5;
+    color: rgb(255, 255, 255);
+}
+
+.forget{
+    font-size: .9rem;
+}
+
+input[name="text"],[name="password"]{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    padding:  1vw 4.7vw;
+    border:1.5px solid #FFC947;
+    color: white;
+    text-align: center;
+    background-color: rgb(112, 127, 145);
+    accent-color: white;
+    letter-spacing: 1.3px;
+    border-radius: 4.5px;
+}
+.user,.Pass{
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    margin: 0.5em 0;
+}
+.field{
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-right: auto;
+   /*  margin-left: 15%; */
+    color: white;
+
+}
+input[name="select"]{
+    outline: none;
+    
+}
+
+
+.sel{
+    accent-color: limegreen;
+    color: rgb(247, 241, 241);
+    text-shadow: 1px 1px 3px black;
+    /* background-color: aqua; */
+    width: 72%;
+    display: grid;
+    grid-template-columns: 1em auto;
+    justify-content: center;    
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn p{
+    margin: 0.5em;
+}
+input[name='login'] {background-image: linear-gradient(to right, #F7971E 0%, #FFD200  51%, #F7971E  100%)}
+
+input[name='login'] {
+   margin: auto;
+   padding: .9em 3.5em;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   border-radius: 7px;
+   display: block;
+ }
+
+ input[name='login']:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+.btn p{
+    color: #fff;
+}
+::-webkit-input-placeholder{
+    color: rgb(219, 219, 219);
+}
+.show, .hide {
+    position: absolute;
+    z-index: 1;
+    margin: 1px;
+    padding: 1%;
+    background-color: transparent;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: none;
+}
+.passfa{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn1{
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 0.2em 1em;
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (max-width:680px){
+    .card{
+        width: 17rem;
+    }
+    input[name='login']{
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='footer.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        function togglepopup() {
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+    </script>
+    <script src="{{ url_for('static',filename='homepage.js') }}"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>Apptitue</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <!-- <li><a href="#">About</a></li> -->
+            <li class="log in"><a href="{{ url_for('login') }}" class="l-btn"> Login</a></li>
+        </ul>
+    </nav>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>This</strong> Website is personal use only do not do any thing.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <section>
+        <div class="location">
+            <div class="opacity"></div>
+            <input type="search" id="location" placeholder="Enter Pincode...." onkeyup="searchFun1()">
+            <input type="search" id="location1" placeholder="Enter Name...." onkeyup="searchFun()">
+            <aside id="box">
+                <span id="output">
+                    <table id='t'>
+                        <thead>
+                            <tr>
+                                <th>Sr.No</th>
+                                <th>Name</th>
+                                <th>Number &nbsp;</th>
+                                <th>Pincode</th>
+                                <th>Address</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tb">
+                            {% for i in data %}
+                            <tr>
+                                <td class="tdata">{{loop.index0+1}}</td>
+                                <td class="tdata">{{i[2]}}</td>
+                                <td class="tdata">{{i[3]}}</td>
+                                <td class="tdata">{{i[4]}}</td>
+                                <td class="tdata add">{{i[5]}}</td>
+                                <td class="tdata">{{i[6]}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </span>
+            </aside>
+        </div>
+    </section>
+    <section>
+        <div class="bg">
+            <div class="img-bx popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglepopup()">&times;</div>
+                    <!--  <aside id="box">
+                        <span id="output" class="t1"> -->
+                    <div class="view">
+                        <table class='t1'>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No</th>
+                                    <th>Name</th>
+                                    <th>given</th>
+                                    <th>food</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tb">
+                                {% for i in dat %}
+                                <tr class="row1">
+                                    <td class="tdata">{{loop.index0+1}}</td>
+                                    <td class="tdata">{{i[8]}}</td>
+                                    <td class="tdata">To</td>
+                                    <td class="tdata">{{i[3]}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <table class='t2'>
+                            <thead>
+                                <tr>
+                                    <th>ngo</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="tb">
+                                {% for i in da %}
+                                <tr class="row2">
+                                    <td class="tdata1">{{i[8]}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--  </span>
+                    </aside> -->
+                </div>
+
+                <!-- <button onclick="togglepopup()">sdfasdfa</button> -->
+                <img class="img" onclick="togglepopup()"
+                    src="https://www.happyfoodstube.com/wp-content/uploads/2020/06/tossed-salad-recipe.jpg">
+                <img class="img" onclick="togglepopup()"
+                    src="https://economictimes.indiatimes.com/thumb/msid-71160461,width-1200,height-900,resizemode-4,imgsize-468901/8.jpg?from=mdr">
+            </div>
+            <div class="log-bg">
+                <a href="{{ url_for('login') }}" class="log-btn"> Login/Sign up </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        {%extends 'footer.html'%}
+    </footer>
+</body>
+
+</html>
